@@ -1,4 +1,4 @@
 CrossPlatformTest
 =================
 
-Testing cross platform development possibilities (WP, Android, iOs, etc...)
+Testing cross platform development possibilities with PhoneGap
