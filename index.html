@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<title>crossplatformtest</title>
+		<meta charset="utf-8" />
+                <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+                <script src="http://openlayers.org/api/OpenLayers.js"></script>
+		<div id="map" class="map"></div>
+
+		<script>
+                    //var map = new OpenLayers.Map('map', { controls: [] });
+
+		    var map = new OpenLayers.Map("map");
+		    map.addLayer(new OpenLayers.Layer.OSM());
+		    var position= new OpenLayers.LonLat(27.24836338, 61.68425742).transform(
+                      new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+		    map.setCenter(position, 13);
+map.addControl(new OpenLayers.Control.MouseToolbar());
+map.addControl(new OpenLayers.Control.MousePosition());
+map.addControl(new OpenLayers.Control.KeyboardDefaults());
+
+		</script>
+	</body>
+</html>
