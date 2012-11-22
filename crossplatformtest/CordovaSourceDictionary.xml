@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is auto-generated, do not edit! -jm -->
+<CordovaSourceDictionary>
+    <FilePath Value="www\css\style.mobile.css"/>
+    <FilePath Value="www\cordova-2.2.0.js"/>
+    <FilePath Value="www\css\style.map.css"/>
+    <FilePath Value="www\img\logo.png"/>
+    <FilePath Value="www\js\index.js"/>
+    <FilePath Value="www\js\jquery-1.8.3.js"/>
+    <FilePath Value="www\js\jquery.mobile-1.2.0.js"/>
+    <FilePath Value="www\js\map.js"/>
+    <FilePath Value="www\js\OpenLayers.mobile.js"/>
+    <FilePath Value="www\css\index.css"/>
+    <FilePath Value="www\index.html"/>
+</CordovaSourceDictionary>
