@@ -34,13 +34,18 @@ var mapInit = function () {
             new OpenLayers.Layer.OSM("OpenStreetMap", null, {
                 transitionEffect: 'resize'
             })
-        ],
-        center: new OpenLayers.LonLat(742000, 5861000),
-        zoom: 3
+        ]
+        //,
+        //center: new OpenLayers.LonLat(742000, 5861000),
+        //zoom: 13
     });
-    
+
+    var position = new OpenLayers.LonLat(27.24836338, 61.68425742).transform(
+                      new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+    map.setCenter(position, 13);
+
     var layer = map.layers[0];
-        layer.events.register("loadend", layer, function (e) {
-            $('.app').remove();
-        });
+    layer.events.register("loadend", layer, function (e) {
+        $('.app').remove();
+    });
 };
