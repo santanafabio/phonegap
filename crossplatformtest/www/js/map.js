@@ -34,7 +34,7 @@ var mapInit = function () {
             new OpenLayers.Layer.OSM("OpenStreetMap", null, {
                 transitionEffect: 'resize'
             })
-        ]
+        ] 
         //,
         //center: new OpenLayers.LonLat(742000, 5861000),
         //zoom: 13
