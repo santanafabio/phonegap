@@ -1,3 +1,4 @@
 # Build Folders
-#Bin
-#obj
+Bin
+obj
+*.csproj.user
