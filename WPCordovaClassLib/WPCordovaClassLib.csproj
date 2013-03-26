@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License. 
+-->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC6A1A70-892D-46AD-9E4A-9793F72AF780}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WPCordovaClassLib</RootNamespace>
+    <AssemblyName>WPCordovaClassLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;CORDOVA_CLASSLIB</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;CORDOVA_CLASSLIB</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Devices.Sensors" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Servicemodel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CordovaLib\BrowserMouseHelper.cs" />
+    <Compile Include="CordovaLib\CommandFactory.cs" />
+    <Compile Include="CordovaLib\Commands\Accelerometer.cs" />
+    <Compile Include="CordovaLib\Commands\AudioFormatsHelper.cs" />
+    <Compile Include="CordovaLib\Commands\AudioPlayer.cs" />
+    <Compile Include="CordovaLib\Commands\BaseCommand.cs" />
+    <Compile Include="CordovaLib\Commands\Battery.cs" />
+    <Compile Include="CordovaLib\Commands\Camera.cs" />
+    <Compile Include="CordovaLib\Commands\Capture.cs" />
+    <Compile Include="CordovaLib\Commands\Compass.cs" />
+    <Compile Include="CordovaLib\Commands\Contacts.cs" />
+    <Compile Include="CordovaLib\Commands\DebugConsole.cs" />
+    <Compile Include="CordovaLib\Commands\Device.cs" />
+    <Compile Include="CordovaLib\Commands\File.cs" />
+    <Compile Include="CordovaLib\Commands\FileTransfer.cs" />
+    <Compile Include="CordovaLib\Commands\GeoLocation.cs" />
+    <Compile Include="CordovaLib\Commands\Globalization.cs" />
+    <Compile Include="CordovaLib\Commands\ImageExifHelper.cs" />
+    <Compile Include="CordovaLib\Commands\InAppBrowser.cs" />
+    <Compile Include="CordovaLib\Commands\Media.cs" />
+    <Compile Include="CordovaLib\Commands\MimeTypeMapper.cs" />
+    <Compile Include="CordovaLib\Commands\NetworkStatus.cs" />
+    <Compile Include="CordovaLib\Commands\Notification.cs" />
+    <Compile Include="CordovaLib\ConfigHandler.cs" />
+    <Compile Include="CordovaLib\CordovaCommandCall.cs" />
+    <Compile Include="CordovaLib\CordovaView.xaml.cs">
+      <DependentUpon>CordovaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CordovaLib\DOMStorageHelper.cs" />
+    <Compile Include="CordovaLib\JSON\JsonHelper.cs" />
+    <Compile Include="CordovaLib\NativeExecution.cs" />
+    <Compile Include="CordovaLib\OrientationHelper.cs" />
+    <Compile Include="CordovaLib\PluginResult.cs" />
+    <Compile Include="CordovaLib\ScriptCallback.cs" />
+    <Compile Include="CordovaLib\UI\AudioCaptureTask.cs" />
+    <Compile Include="CordovaLib\UI\AudioRecorder.xaml.cs">
+      <DependentUpon>AudioRecorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CordovaLib\UI\ImageCapture.xaml.cs">
+      <DependentUpon>ImageCapture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CordovaLib\UI\NotificationBox.xaml.cs">
+      <DependentUpon>NotificationBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CordovaLib\UI\VideoCaptureTask.cs" />
+    <Compile Include="CordovaLib\UI\VideoRecorder.xaml.cs">
+      <DependentUpon>VideoRecorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\LinqToVisualTree.cs" />
+    <Compile Include="Helper\WebBrowserHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CordovaLib\Images\appbar.back.rest.png" />
+    <Resource Include="CordovaLib\Images\appbar.close.rest.png" />
+    <Resource Include="CordovaLib\Images\appbar.feature.video.rest.png" />
+    <Resource Include="CordovaLib\Images\appbar.next.rest.png" />
+    <Resource Include="CordovaLib\Images\appbar.save.rest.png" />
+    <Resource Include="CordovaLib\Images\appbar.stop.rest.png" />
+    <Content Include="CordovaLib\resources\notification-beep.wav" />
+    <Content Include="Images\appbar.back.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.close.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.feature.video.rest.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.next.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.stop.rest.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.save.rest.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\notification-beep.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="CordovaLib\CordovaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CordovaLib\UI\AudioRecorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CordovaLib\UI\ImageCapture.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CordovaLib\UI\NotificationBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CordovaLib\UI\VideoRecorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

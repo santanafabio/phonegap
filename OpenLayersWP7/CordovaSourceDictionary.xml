@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is auto-generated, do not edit! -jm -->
+<CordovaSourceDictionary>
+    <FilePath Value="www\cordova-2.4.0.js"/>
+    <FilePath Value="www\cordova-current.js"/>
+    <FilePath Value="www\mobile.js"/>
+    <FilePath Value="www\OpenLayers.mobile.js"/>
+    <FilePath Value="www\style.mobile.css"/>
+    <FilePath Value="www\index.html"/>
+    <FilePath Value="www\master.css"/>
+</CordovaSourceDictionary>
